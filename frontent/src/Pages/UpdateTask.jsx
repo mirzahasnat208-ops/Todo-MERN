@@ -11,7 +11,7 @@ export default function UpdateTask() {
 
   useEffect(() => {
     async function fetchTodoItem() {
-      const todoItem = await axios.get(`http://localhost:3000/todo/${id}`);
+      const todoItem = await axios.get(`https://todo-mern-production-5917d1a9.up.railway.app/todo/${id}`);
       setTitle(todoItem.data.title);
       setDesc(todoItem.data.description);
     }
@@ -25,7 +25,7 @@ export default function UpdateTask() {
       description: desc,
     };
 
-    await axios.put(`http://localhost:3000/todo/${id}`, newTodo);
+    await axios.put(`https://todo-mern-production-5917d1a9.up.railway.app/todo/${id}`, newTodo);
     navigate("/");
   }
 
